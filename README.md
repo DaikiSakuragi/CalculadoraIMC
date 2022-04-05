@@ -6,6 +6,7 @@ Aplicação console para cáculos do IMC.
 
 - Calcula e apresenta IMC
 - Apresenta a classificação do IMC do usuário
+- Apresenta quanto peso o usuário precisa ganhar ou perder para atingir o nível de IMC ideal
 
 ## Tecnologias Utilizadas
 
