@@ -1,6 +1,6 @@
 class Individuo
 {
-    public double Nome { get; set; }
+    public string Nome { get; set; }
     public double Altura { get; set; }
     public double Peso { get; set; }
     public double IMC { get => Peso / (Altura * Altura); }
@@ -8,7 +8,7 @@ class Individuo
     public double Pesoy { get => 18.50 / (Altura * Altura); }
     public double Ganhar { get => Pesoy - Peso; }
     public double Perder { get => Peso - Pesox; }
-    public Individuo(double nome, double altura, double peso)
+    public Individuo(string nome, double altura, double peso)
     {
         Nome = nome;
         Altura = altura;
@@ -19,11 +19,11 @@ class Individuo
     {
             if(IMC <= 17.00)
             {
-                return "Muito abaixo do peso. Você precisa ganhar cerca de {0}kg para alcançar o peso ideal" + Ganhar;
+                return "Muito abaixo do peso. Você precisa ganhar cerca de " + Ganhar +"kg para alcançar o peso ideal";
             }
             else if(IMC >= 17.00 && IMC <= 18.49)
             {
-                return "Abaixo do peso. Você precisa ganhar cerca de {0}kg para alcançar o peso ideal" + Ganhar;
+                return "Abaixo do peso. Você precisa ganhar cerca de " + Ganhar +"kg para alcançar o peso ideal";
             }
             else if(IMC >= 18.50 && IMC <= 24.99)
             {
@@ -31,18 +31,18 @@ class Individuo
             }
             else if(IMC >= 25 && IMC <= 29.99)
             {
-                return "Acima do peso. Você precisa perder cerca de {0}kg para alcançar o peso ideal" + Perder;
+                return "Acima do peso. Você precisa perder cerca de " + Perder + "kg para alcançar o peso ideal";
             }
             else if(IMC >= 30 && IMC <= 34.99)
             {
             
-                return "Obesidade I. Você precisa perder cerca de {0}kg para alcançar o peso ideal" + Perder;
+                return "Obesidade I. Você precisa perder cerca de " + Perder + "kg para alcançar o peso ideal";
             }
             else if(IMC >= 35 && IMC <= 39.99)
             {
-                return "Obesidade II (severa). Você precisa perder cerca de {0}kg para alcançar o peso ideal" + Perder;
+                return "Obesidade II (severa). Você precisa perder cerca de " + Perder + "kg para alcançar o peso ideal";
             }
             
-                return "Obesidade III (mórbida). Você precisa perder cerca de {0}kg para alcançar o peso ideal" + Perder;
+            return "Obesidade III (mórbida). Você precisa perder cerca de " + Perder + "kg para alcançar o peso ideal";
     }
 }
