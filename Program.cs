@@ -6,11 +6,18 @@ namespace AtividadeLP3
     {
         static void Main(string[] args)
         {
-            Individuo i1 = new Individuo("Daiki", 1.70, 80);
+            
+            Console.WriteLine("Digite seu Nome: ");
+            string nome = Console.ReadLine();
 
-            System.Console.WriteLine(i1.Nome);
-            System.Console.WriteLine(i1.Altura);
-            System.Console.WriteLine(i1.Peso);
+            Console.WriteLine("Digite sua Altura: ");
+            double altura = Convert.ToSingle(Console.ReadLine());
+
+            Console.WriteLine("Digite seu peso: ");
+            double peso = Convert.ToSingle(Console.ReadLine());
+
+            Individuo i1 = new Individuo(nome, altura, peso);
+
             System.Console.WriteLine(i1.IMC);
             System.Console.WriteLine(i1.Classificacao());
 
