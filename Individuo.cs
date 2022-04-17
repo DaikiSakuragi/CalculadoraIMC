@@ -4,8 +4,8 @@ class Individuo
     public double Altura { get; set; }
     public double Peso { get; set; }
     public double IMC { get => Peso / (Altura * Altura); }
-    public double Pesox { get => 24.99 / (Altura * Altura); }
-    public double Pesoy { get => 18.50 / (Altura * Altura); }
+    public double Pesox { get => 24.99 * (Altura * Altura); }
+    public double Pesoy { get => 18.50 * (Altura * Altura); }
     public double Ganhar { get => Pesoy - Peso; }
     public double Perder { get => Peso - Pesox; }
     public Individuo(string nome, double altura, double peso)
